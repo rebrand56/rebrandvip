@@ -1,0 +1,14 @@
+{
+  "name": "rebrandvip",
+  "account_id": "54d6b7cbeebf9e0c3fa93aaf4db66660",
+  "main": "worker.mjs",
+  "compatibility_date": "2026-10-19",
+  "workers_dev": true,
+  "rules": [
+    {
+      "type": "Text",
+      "globs": ["**/*.lua"],
+      "fallthrough": true
+    }
+  ]
+}
