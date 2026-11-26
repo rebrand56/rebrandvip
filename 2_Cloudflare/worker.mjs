@@ -61,7 +61,7 @@ async function readForm(request) {
 }
 
 // No digest, byte count, release ID or marker is required to publish new Lua.
-function createHandler({ payload, primaryName = 'speed.lua', basePath = '/' }) {
+function createHandler({ payload, primaryName = 'vip.lua', basePath = '/' }) {
   if (typeof payload !== 'string' || !payload.length) throw new TypeError('Payload must be nonempty Lua text');
   if (typeof primaryName !== 'string' || !/^[A-Za-z0-9][A-Za-z0-9._-]*\.lua$/.test(primaryName)) {
     throw new TypeError('Invalid payload name');
@@ -97,5 +97,5 @@ function createHandler({ payload, primaryName = 'speed.lua', basePath = '/' }) {
 
 
 export default {
-  fetch: createHandler({ payload, primaryName: "speed.lua", basePath: "/" }),
+  fetch: createHandler({ payload, primaryName: "vip.lua", basePath: "/" }),
 };
